@@ -2,7 +2,7 @@ var msql = require('mysql');
 
 var connection;
 
-if (process.env.herokudb_URL) {
+if (process.env.burgers_db_URL) {
 
   connection = mysql.CreateConnect ({
     port: 3306,
@@ -21,4 +21,4 @@ connection.connect(function(err){
   console.log('Connected to MySQL database as id ' connection.threadId + '\n\n');
 });
 
-module.exports = connection; 
+module.exports = connection;
